@@ -19,6 +19,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isNavigating, setIsNavigating] = useState(false);
 
   // Scroll-spy: track which section is currently in view (home page only)
   useEffect(() => {
@@ -46,12 +49,42 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, [isHome]);
 
-  // Track scroll for navbar background opacity
+  // Track scroll for navbar background opacity and hide/show logic
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Background opacity
+      setScrolled(currentScrollY > 60);
+
+      // Hide/Show on scroll
+      // If we are currently navigating via a link click, don't hide the navbar
+      if (isNavigating) {
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 80 && !mobileOpen) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY, mobileOpen, isNavigating]);
+
+  const handleLinkClick = useCallback(() => {
+    setIsNavigating(true);
+    setVisible(true);
+    // 1200ms covers the duration of the smooth scroll
+    setTimeout(() => setIsNavigating(false), 1200);
   }, []);
+
+  const handleMobileLinkClick = useCallback(() => {
+    handleLinkClick();
+    setMobileOpen(false);
+  }, [handleLinkClick]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -78,7 +111,7 @@ export default function Navbar() {
   return (
     <header>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out"
         style={{
           backgroundColor: scrolled
             ? "rgba(19,19,19,0.95)"
@@ -86,6 +119,7 @@ export default function Navbar() {
           backdropFilter: "blur(6px)",
           WebkitBackdropFilter: "blur(6px)",
           borderBottom: "1px solid rgba(212,175,55,0.3)",
+          transform: visible ? "translateY(0)" : "translateY(-100%)",
         }}
         aria-label="Main navigation"
       >
@@ -93,6 +127,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
+            onClick={handleLinkClick}
             className="font-heading font-bold text-[18px] sm:text-[20px] md:text-[24px] tracking-[-1.2px] text-[#d4af37] leading-[32px]"
             aria-label="Shiv Shakti Construction — Home"
           >
@@ -107,11 +142,11 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`font-heading font-normal text-[12px] tracking-[1.8px] uppercase leading-[16px] transition-colors duration-300 hover:text-[#f2ca50] ml-10 first:ml-0 ${
-                    active
+                  onClick={handleLinkClick}
+                  className={`font-heading font-normal text-[12px] tracking-[1.8px] uppercase leading-[16px] transition-colors duration-300 hover:text-[#f2ca50] ml-10 first:ml-0 ${active
                       ? "text-[#f2ca50] border-b border-[#d4af37] pb-[5px]"
                       : "text-[#d0c5af]"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -122,6 +157,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <Link
             href="/contact"
+            onClick={handleLinkClick}
             className="hidden lg:flex bg-[#d4af37] px-6 xl:px-8 py-3 items-center justify-center hover:bg-[#f2ca50] transition-colors duration-300"
           >
             <span className="font-body font-bold text-[11px] xl:text-[12px] tracking-[1.2px] text-[#3c2f00] whitespace-nowrap">
@@ -185,12 +221,11 @@ export default function Navbar() {
                       <Link
                         key={link.label}
                         href={link.href}
-                        onClick={closeMobile}
-                        className={`font-heading text-[14px] tracking-[1.8px] uppercase transition-colors py-1 ${
-                          active
+                        onClick={handleMobileLinkClick}
+                        className={`font-heading text-[14px] tracking-[1.8px] uppercase transition-colors py-1 ${active
                             ? "text-[#f2ca50]"
                             : "text-[#d0c5af] hover:text-[#f2ca50]"
-                        }`}
+                          }`}
                       >
                         {link.label}
                       </Link>
@@ -201,14 +236,14 @@ export default function Navbar() {
                   <div className="border-t border-[rgba(212,175,55,0.15)] pt-4 mt-1 flex flex-col gap-3">
                     <Link
                       href="/flats/2bhk"
-                      onClick={closeMobile}
+                      onClick={handleMobileLinkClick}
                       className="font-body text-[12px] tracking-[1px] uppercase text-[#99907c] hover:text-[#f2ca50] transition-colors"
                     >
                       → 2BHK Flats
                     </Link>
                     <Link
                       href="/flats/3bhk"
-                      onClick={closeMobile}
+                      onClick={handleMobileLinkClick}
                       className="font-body text-[12px] tracking-[1px] uppercase text-[#99907c] hover:text-[#f2ca50] transition-colors"
                     >
                       → 3BHK Flats
@@ -217,7 +252,7 @@ export default function Navbar() {
 
                   <Link
                     href="/contact"
-                    onClick={closeMobile}
+                    onClick={handleMobileLinkClick}
                     className="bg-[#d4af37] px-6 py-3 text-center font-body font-bold text-[12px] tracking-[1.2px] text-[#3c2f00] mt-2 active:bg-[#f2ca50]"
                   >
                     START YOUR BUILD

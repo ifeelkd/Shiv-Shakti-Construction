@@ -3,6 +3,7 @@ export interface ServiceItem {
   title: string;
   description: string;
   cta: string;
+  href: string;
 }
 
 export const services: ServiceItem[] = [
@@ -12,6 +13,7 @@ export const services: ServiceItem[] = [
     description:
       "Deep-foundation logistics and high-tensile steel integration for seismic-ready commercial monoliths.",
     cta: "CORE SPECS",
+    href: "/#process",
   },
   {
     icon: "/images/icon-material.svg",
@@ -19,6 +21,7 @@ export const services: ServiceItem[] = [
     description:
       "Exclusive sourcing of Grade-A Italian marble, structural glass, and sustainable carbon-neutral concrete.",
     cta: "LOGISTICS",
+    href: "/#about",
   },
   {
     icon: "/images/icon-urban.svg",
@@ -26,5 +29,6 @@ export const services: ServiceItem[] = [
     description:
       "Comprehensive site master-planning and navigational design for high-density residential complexes.",
     cta: "PORTFOLIO",
+    href: "/#landmarks",
   },
 ];

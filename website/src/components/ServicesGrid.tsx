@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { services } from "@/data/services.data";
 
@@ -38,7 +39,7 @@ export default function ServicesGrid() {
               whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true, margin: "-80px" }}
-              className="border border-[#f2ca50] p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col relative min-h-[260px] sm:min-h-[300px] md:min-h-[333px]"
+              className="border border-[#f2ca50] p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col relative min-h-[260px] sm:min-h-[300px] md:min-h-[333px] group/card transition-all duration-500 hover:scale-[1.02] hover:bg-[#1a1a1a] hover:z-20 hover:shadow-[0_15px_30px_rgba(0,0,0,0.3)]"
             >
               {/* Icon */}
               <div className="w-6 h-6 mb-8 sm:mb-10 md:mb-12 lg:mb-16 relative flex-shrink-0">
@@ -63,9 +64,15 @@ export default function ServicesGrid() {
               </p>
 
               {/* CTA Label */}
-              <p className="font-body font-bold text-[11px] sm:text-[12px] tracking-[1.2px] text-[#e5e2e1] mt-auto">
+              <Link
+                href={service.href}
+                className="font-body font-bold text-[11px] sm:text-[12px] tracking-[1.2px] text-[#e5e2e1] mt-auto hover:text-[#f2ca50] transition-colors flex items-center gap-2 group"
+              >
                 {service.cta}
-              </p>
+                <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                  →
+                </span>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -34,8 +34,8 @@ export const testimonial: Testimonial = {
 };
 
 export const heroStats = [
-  { value: "25+", label: "Years of Heritage" },
-  { value: "142", label: "Completed Assets" },
+  { value: "BORN IN MARBLE", label: "FOUNDATION OF QUALITY" },
+  { value: "500+ FAMILIES", label: "OUR GREATEST LEGACY" },
 ];
 
 export const contactInfo = {

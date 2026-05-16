@@ -31,7 +31,7 @@ export default function LegacyAssets() {
 
   return (
     <section
-      id="landmarks"
+      id="legacy-assets"
       className="section-padding"
       style={{ backgroundColor: "rgba(212,175,55,0.2)" }}
       aria-label="Legacy Assets — Flat Types"
@@ -44,48 +44,50 @@ export default function LegacyAssets() {
             <h2 className="heading-section">Legacy Assets</h2>
           </div>
 
-          <div className="flex items-center gap-3 sm:gap-4">
-            <button
-              onClick={() => scrollTo("prev")}
-              disabled={activeIndex === 0}
-              className="w-10 h-10 sm:w-12 sm:h-12 border border-[rgba(77,70,53,0.3)] flex items-center justify-center hover:border-[#d4af37] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-              aria-label="Previous project"
-            >
-              <svg
-                width="6"
-                height="11"
-                viewBox="0 0 6 11"
-                fill="none"
-                aria-hidden="true"
+          {flatTypes.length > 3 && (
+            <div className="flex items-center gap-3 sm:gap-4">
+              <button
+                onClick={() => scrollTo("prev")}
+                disabled={activeIndex === 0}
+                className="w-10 h-10 sm:w-12 sm:h-12 border border-[rgba(77,70,53,0.3)] flex items-center justify-center hover:border-[#d4af37] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                aria-label="Previous project"
               >
-                <path
-                  d="M5.5 0.5L0.5 5.5L5.5 10.5"
-                  stroke="#d0c5af"
-                  strokeWidth="1"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={() => scrollTo("next")}
-              disabled={activeIndex >= flatTypes.length - 1}
-              className="w-10 h-10 sm:w-12 sm:h-12 border border-[rgba(77,70,53,0.3)] flex items-center justify-center hover:border-[#d4af37] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-              aria-label="Next project"
-            >
-              <svg
-                width="6"
-                height="11"
-                viewBox="0 0 6 11"
-                fill="none"
-                aria-hidden="true"
+                <svg
+                  width="6"
+                  height="11"
+                  viewBox="0 0 6 11"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5.5 0.5L0.5 5.5L5.5 10.5"
+                    stroke="#d0c5af"
+                    strokeWidth="1"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={() => scrollTo("next")}
+                disabled={activeIndex >= flatTypes.length - 1}
+                className="w-10 h-10 sm:w-12 sm:h-12 border border-[rgba(77,70,53,0.3)] flex items-center justify-center hover:border-[#d4af37] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                aria-label="Next project"
               >
-                <path
-                  d="M0.5 0.5L5.5 5.5L0.5 10.5"
-                  stroke="#d0c5af"
-                  strokeWidth="1"
-                />
-              </svg>
-            </button>
-          </div>
+                <svg
+                  width="6"
+                  height="11"
+                  viewBox="0 0 6 11"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M0.5 0.5L5.5 5.5L0.5 10.5"
+                    stroke="#d0c5af"
+                    strokeWidth="1"
+                  />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Cards — Desktop Grid / Mobile Horizontal Scroll */}
@@ -108,7 +110,7 @@ export default function LegacyAssets() {
                 }
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="bg-[#f2ca50] overflow-hidden group flex-shrink-0 w-[80vw] sm:w-[70vw] lg:w-auto snap-start"
+                className="bg-[#f2ca50] overflow-hidden group flex-shrink-0 w-[80vw] sm:w-[70vw] lg:w-auto snap-start transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]"
               >
                 <Link href={detailHref} className="block">
                   {/* Card Image */}
@@ -148,18 +150,20 @@ export default function LegacyAssets() {
         </div>
 
         {/* Mobile scroll indicator dots */}
-        <div className="flex lg:hidden justify-center gap-2 mt-4">
-          {flatTypes.map((flat, idx) => (
-            <span
-              key={flat.slug}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                idx === activeIndex
-                  ? "bg-[#d4af37]"
-                  : "bg-[rgba(212,175,55,0.3)]"
-              }`}
-            />
-          ))}
-        </div>
+        {flatTypes.length > 3 && (
+          <div className="flex lg:hidden justify-center gap-2 mt-4">
+            {flatTypes.map((flat, idx) => (
+              <span
+                key={flat.slug}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  idx === activeIndex
+                    ? "bg-[#d4af37]"
+                    : "bg-[rgba(212,175,55,0.3)]"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

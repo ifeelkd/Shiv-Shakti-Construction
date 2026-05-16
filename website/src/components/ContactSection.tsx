@@ -60,7 +60,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="px-4 sm:px-6 md:px-12 lg:px-24 pt-12 sm:pt-16 md:pt-24 lg:pt-32 pb-12 sm:pb-16 md:pb-24" style={{ backgroundColor: "#2a2a2a" }} aria-label="Contact Us">
+    <section id="contact" className="px-4 sm:px-6 md:px-12 lg:px-24 pt-8 sm:pt-10 md:pt-12 pb-12 sm:pb-16 md:pb-24" style={{ backgroundColor: "#2a2a2a" }} aria-label="Contact Us">
       <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-20">
         {/* Left Column */}
         <motion.div initial={prefersReduced ? undefined : { opacity: 0, x: -30 }} whileInView={prefersReduced ? undefined : { opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="lg:w-[496px] flex-shrink-0">

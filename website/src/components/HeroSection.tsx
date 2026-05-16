@@ -87,10 +87,13 @@ export default function HeroSection() {
           >
             <a
               href="#real-estate"
-              className="bg-[#d4af37] hover:bg-[#f2ca50] active:bg-[#e6be3f] transition-colors duration-300 px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5"
+              className="group bg-[#d4af37] hover:bg-[#f2ca50] active:bg-[#e6be3f] transition-colors duration-300 px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center gap-3"
             >
               <span className="font-body font-bold text-[11px] sm:text-[12px] md:text-[14px] tracking-[1.4px] text-[#3c2f00] text-center whitespace-nowrap">
-                VIEW MONOGRAPHS
+                EXPLORE THE TOWER
+              </span>
+              <span className="text-[#3c2f00] transform group-hover:translate-x-1 transition-transform duration-300">
+                →
               </span>
             </a>
             <div className="ml-8 w-[128px] h-[0.5px] bg-[#d4af37] hidden md:block" />

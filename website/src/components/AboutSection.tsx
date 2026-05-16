@@ -95,7 +95,7 @@ export default function AboutSection() {
               {milestones.map((stat, i) => (
                 <div
                   key={stat.label}
-                  className="border border-[rgba(77,70,53,0.3)] p-6 sm:p-8 text-center"
+                  className="border border-[rgba(77,70,53,0.3)] p-6 sm:p-8 text-center transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] hover:border-[#d4af37]/40"
                   style={{
                     background:
                       i === 0
@@ -103,10 +103,10 @@ export default function AboutSection() {
                         : "transparent",
                   }}
                 >
-                  <p className="font-heading font-bold text-[32px] sm:text-[40px] md:text-[48px] text-[#d4af37] leading-[1.1] mb-2">
+                  <p className="font-heading font-bold text-[32px] sm:text-[40px] md:text-[48px] text-[#d4af37]/80 group-hover:text-[#d4af37] transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] mb-2">
                     {stat.value}
                   </p>
-                  <p className="font-body text-[10px] sm:text-[11px] tracking-[1px] uppercase text-[#99907c]">
+                  <p className="font-body text-[10px] sm:text-[11px] tracking-[1px] uppercase text-[#99907c] group-hover:text-[#d0c5af] transition-colors duration-500">
                     {stat.label}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ export default function AboutSection() {
             </div>
 
             {/* Values */}
-            <div className="mt-6 sm:mt-8 border border-[rgba(77,70,53,0.3)] p-6 sm:p-8">
+            <div className="mt-6 sm:mt-8 border border-[rgba(77,70,53,0.3)] p-6 sm:p-8 transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] hover:border-[#d4af37]/40">
               <p className="label-sm mb-4">Our Values</p>
               <div className="flex flex-col gap-3">
                 {[
@@ -123,12 +123,12 @@ export default function AboutSection() {
                   "Transparent Pricing & Timelines",
                   "Sustainable Building Practices",
                 ].map((value) => (
-                  <div key={value} className="flex items-start gap-3">
+                  <div key={value} className="flex items-start gap-3 group/item">
                     <span
-                      className="w-1.5 h-1.5 bg-[#d4af37] rounded-full mt-2 flex-shrink-0"
+                      className="w-1.5 h-1.5 bg-[#d4af37]/60 group-hover:bg-[#d4af37] rounded-full mt-2 flex-shrink-0 transition-colors duration-300"
                       aria-hidden="true"
                     />
-                    <p className="font-body text-[13px] sm:text-[14px] text-[#d0c5af] leading-[22px]">
+                    <p className="font-body text-[13px] sm:text-[14px] text-[#d0c5af] group-hover:text-white transition-colors duration-500 leading-[22px]">
                       {value}
                     </p>
                   </div>

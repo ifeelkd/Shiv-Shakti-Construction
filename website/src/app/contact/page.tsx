@@ -21,12 +21,12 @@ export default function ContactPage() {
       <main id="main-content">
         {/* Contact Hero */}
         <section
-          className="relative pt-[120px] sm:pt-[140px] pb-6 sm:pb-8 px-4 sm:px-6 md:px-12 lg:px-24"
+          className="relative pt-[120px] sm:pt-[140px] pb-0 px-4 sm:px-6 md:px-12 lg:px-24"
           style={{ backgroundColor: "#2a2a2a" }}
         >
-          <div className="max-w-[1088px] mx-auto">
+          <div className="max-w-[1280px] mx-auto">
             <p className="label-sm mb-3 sm:mb-4">Get in Touch</p>
-            <h1 className="font-heading font-bold text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] text-[#ffdf7d] leading-[1.05]">
+            <h1 className="font-heading font-bold text-[36px] sm:text-[48px] md:text-[60px] lg:text-[72px] text-[#ffdf7d] leading-[1.05] -ml-[2px] sm:-ml-[3px] md:-ml-[4px]">
               Contact Us
             </h1>
           </div>

@@ -59,7 +59,7 @@ export default function ProjectQuickLinks() {
             >
               <Link
                 href={link.href}
-                className="group block border border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] p-6 sm:p-7 md:p-8 transition-all duration-300 h-full relative overflow-hidden"
+                className="group block border border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] p-6 sm:p-7 md:p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] h-full relative overflow-hidden bg-[#1a1a1a]/0 hover:bg-[#1a1a1a]/40"
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -77,8 +77,11 @@ export default function ProjectQuickLinks() {
                   <p className="font-body text-[12px] sm:text-[13px] text-[#99907c] leading-[20px] mb-4 sm:mb-6">
                     {link.description}
                   </p>
-                  <span className="font-body font-bold text-[11px] sm:text-[12px] tracking-[1.2px] uppercase text-[#d0c5af] group-hover:text-[#f2ca50] transition-colors">
-                    EXPLORE →
+                  <span className="font-body font-bold text-[11px] sm:text-[12px] tracking-[1.2px] uppercase text-[#d0c5af] group-hover:text-[#f2ca50] transition-colors flex items-center gap-2">
+                    EXPLORE 
+                    <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                      →
+                    </span>
                   </span>
                 </div>
               </Link>

@@ -82,7 +82,7 @@ export default function NearbyPlaces() {
               whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               viewport={{ once: true, margin: "-30px" }}
-              className="border border-[rgba(77,70,53,0.3)] p-4 sm:p-5 flex items-start justify-between gap-3 hover:border-[#d4af37] transition-colors duration-300 group"
+              className="border border-[rgba(77,70,53,0.3)] p-4 sm:p-5 flex items-start justify-between gap-3 hover:border-[#d4af37] transition-all duration-500 group hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(242,202,80,0.05)] bg-[#1a1a1a]/0 hover:bg-[#1a1a1a]/40"
             >
               <div className="flex-1 min-w-0">
                 <p className="font-body font-bold text-[13px] sm:text-[14px] text-[#e5e2e1] leading-[20px] mb-1 truncate group-hover:text-[#f2ca50] transition-colors">

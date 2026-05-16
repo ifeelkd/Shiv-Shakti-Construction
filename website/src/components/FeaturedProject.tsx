@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { projectSpecs } from "@/data/project.data";
 
@@ -24,16 +25,17 @@ export default function FeaturedProject() {
             viewport={{ once: true }}
             className="lg:col-span-7 relative order-2 lg:order-1"
           >
-            <div className="relative aspect-[4/3] sm:aspect-[615/700] w-full overflow-hidden">
+            <Link href="#legacy-assets" className="group block relative aspect-[4/3] sm:aspect-[615/700] w-full overflow-hidden cursor-pointer">
               <Image
                 src="/images/towers-main.png"
                 alt="Shiv Shakti Towers — Premium residential tower rising above Bongaigaon skyline"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 58vw"
                 loading="lazy"
               />
-            </div>
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+            </Link>
 
             {/* Specs Card - overlaying bottom right */}
             <div className="relative lg:absolute bottom-0 right-0 lg:-bottom-12 lg:-right-12 bg-[#131313] p-6 sm:p-8 md:p-10 lg:p-12 mt-0 lg:mt-0">
@@ -66,11 +68,13 @@ export default function FeaturedProject() {
           >
             <p className="label-sm">Featured Project</p>
 
-            <h2 className="font-heading font-bold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] text-[#e5e2e1] leading-[1.05]">
-              Shiv Shakti
-              <br />
-              Towers
-            </h2>
+            <Link href="#legacy-assets" className="group block">
+              <h2 className="font-heading font-bold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] text-[#e5e2e1] leading-[1.05] transition-colors duration-300 group-hover:text-[#f2ca50]">
+                Shiv Shakti
+                <br />
+                Towers
+              </h2>
+            </Link>
 
             <p className="font-body font-normal text-[14px] md:text-[15px] lg:text-[16px] text-[#d0c5af] leading-[24px] md:leading-[26px] pt-2 sm:pt-4 max-w-[420px]">
               A masterclass in vertical living. Designed with a skeletal frame of
@@ -89,11 +93,11 @@ export default function FeaturedProject() {
                   REQUEST TECHNICAL DOSSIER
                 </span>
               </a>
-              <a href="#landmarks" className="text-center py-2">
-                <span className="font-body font-normal text-[12px] tracking-[1.2px] text-[#d0c5af] underline hover:text-[#f2ca50] transition-colors">
+              <Link href="#legacy-assets" className="text-center py-2">
+                <span className="font-body font-normal text-[12px] tracking-[1.2px] text-[#d0c5af] underline hover:text-[#f2ca50] transition-colors cursor-pointer">
                   VIEW FLOOR PLANS
                 </span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
