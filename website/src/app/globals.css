@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/* ===== Design Token Layer ===== */
+@layer base {
+  :root {
+    /* Backgrounds */
+    --bg-primary: #131313;
+    --bg-darker: #0e0e0e;
+    --bg-medium: #1c1b1b;
+    --bg-card: #2a2a2a;
+
+    /* Gold palette */
+    --gold: #d4af37;
+    --gold-light: #f2ca50;
+    --gold-heading: #ffdf7d;
+    --gold-dark: #7d5900;
+    --gold-darker: #3c2f00;
+
+    /* Text palette */
+    --text-primary: #e5e2e1;
+    --text-muted: #d0c5af;
+    --text-dim: #99907c;
+
+    /* Border */
+    --border-subtle: rgba(77, 70, 53, 0.3);
+    --border-gold: rgba(212, 175, 55, 0.3);
+
+    /* Fonts */
+    --font-heading: var(--font-noto-serif), "Noto Serif", Georgia, serif;
+    --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+    --font-form: var(--font-manrope), "Manrope", system-ui, sans-serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--gold);
+    color: var(--gold-darker);
+  }
+
+  /* Focus visible for keyboard accessibility */
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* ===== Utility Classes ===== */
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-form {
+    font-family: var(--font-form);
+  }
+
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .text-gold-light {
+    color: var(--gold-light);
+  }
+
+  .text-gold-heading {
+    color: var(--gold-heading);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-dim {
+    color: var(--text-dim);
+  }
+
+  .bg-gold {
+    background-color: var(--gold);
+  }
+
+  .bg-gold-light {
+    background-color: var(--gold-light);
+  }
+
+  .section-padding {
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+
+  /* Label style from Figma */
+  .label-sm {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    line-height: 20px;
+    color: var(--gold-light);
+  }
+
+  .heading-section {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    color: var(--text-primary);
+  }
+
+  .divider-gold {
+    width: 128px;
+    height: 0.5px;
+    background-color: var(--gold);
+  }
+
+  /* Scroll snap container for horizontal carousels */
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .scroll-snap-x::-webkit-scrollbar {
+    display: none;
+  }
+
+  .snap-center {
+    scroll-snap-align: center;
+  }
+
+  .snap-start {
+    scroll-snap-align: start;
+  }
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 1024px) {
+  .section-padding {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .heading-section {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .heading-section {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .label-sm {
+    font-size: 12px;
+    letter-spacing: 1.8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-padding {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .heading-section {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
