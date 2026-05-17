@@ -74,7 +74,7 @@ export default function NearbyPlaces() {
         </div>
 
         {/* Places Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {filtered.map((place, i) => (
             <motion.div
               key={place.name}
@@ -82,21 +82,21 @@ export default function NearbyPlaces() {
               whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               viewport={{ once: true, margin: "-30px" }}
-              className="border border-[rgba(77,70,53,0.3)] p-4 sm:p-5 flex items-start justify-between gap-3 hover:border-[#d4af37] transition-all duration-500 group hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(242,202,80,0.05)] bg-[#1a1a1a]/0 hover:bg-[#1a1a1a]/40"
+              className="border border-[rgba(77,70,53,0.3)] p-3 xs:p-4 sm:p-5 flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 sm:gap-3 hover:border-[#d4af37] transition-all duration-500 group hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(242,202,80,0.05)] bg-[#1a1a1a]/0 hover:bg-[#1a1a1a]/40"
             >
               <div className="flex-1 min-w-0">
-                <p className="font-body font-bold text-[13px] sm:text-[14px] text-[#e5e2e1] leading-[20px] mb-1 truncate group-hover:text-[#f2ca50] transition-colors">
+                <p className="font-body font-bold text-[11px] xs:text-[12px] sm:text-[14px] text-[#e5e2e1] leading-[15px] sm:leading-[20px] mb-0.5 truncate group-hover:text-[#f2ca50] transition-colors">
                   {place.name}
                 </p>
-                <p className="font-body text-[10px] sm:text-[11px] tracking-[0.8px] uppercase text-[#99907c] leading-[16px]">
+                <p className="font-body text-[8px] xs:text-[9px] sm:text-[11px] tracking-[0.5px] uppercase text-[#99907c] leading-none">
                   {place.category}
                 </p>
               </div>
-              <div className="flex-shrink-0 text-right">
-                <p className="font-heading font-normal text-[15px] sm:text-[16px] text-[#f2ca50] leading-[22px]">
+              <div className="flex-shrink-0 text-left sm:text-right pt-2 sm:pt-0 border-t border-[rgba(77,70,53,0.15)] sm:border-0 flex items-center justify-between sm:block">
+                <p className="font-heading font-normal text-[12px] xs:text-[14px] sm:text-[16px] text-[#f2ca50] leading-none mb-0.5">
                   {place.distanceText}
                 </p>
-                <p className="font-body text-[10px] text-[#d0c5af] leading-[14px]">
+                <p className="font-body text-[8px] xs:text-[9px] sm:text-[10px] text-[#d0c5af] leading-none">
                   {place.travelTimeText}
                 </p>
               </div>

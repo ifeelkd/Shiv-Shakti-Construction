@@ -26,7 +26,7 @@ export default function FlatDetailLayout({ flat }: FlatDetailLayoutProps) {
     <>
       {/* Hero Banner */}
       <section
-        className="relative pt-[120px] sm:pt-[140px] pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-12 lg:px-24"
+        className="relative pt-[90px] md:pt-[140px] pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-12 lg:px-24"
         style={{ backgroundColor: "#0e0e0e" }}
       >
         {/* Subtle gold gradient overlay */}
@@ -148,19 +148,19 @@ export default function FlatDetailLayout({ flat }: FlatDetailLayoutProps) {
             <div className="divider-gold mb-10 sm:mb-12" />
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
             {flat.amenities.map((amenity, i) => (
               <motion.div
                 key={amenity}
                 {...anim({ y: 20 }, 0.05 * i)}
-                className="border border-[rgba(77,70,53,0.3)] px-5 py-4 sm:px-6 sm:py-5 hover:border-[#d4af37] transition-colors duration-300 group"
+                className="border border-[rgba(77,70,53,0.3)] px-3.5 py-4 sm:px-6 sm:py-5 hover:border-[#d4af37] transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(212,175,55,0.05)] bg-[#131313]/30"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 sm:gap-3">
                   <span
-                    className="w-2 h-2 bg-[#d4af37] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform"
+                    className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#d4af37] rounded-full flex-shrink-0 group-hover:scale-125 transition-transform"
                     aria-hidden="true"
                   />
-                  <span className="font-body text-[13px] sm:text-[14px] text-[#e5e2e1] leading-[20px]">
+                  <span className="font-body text-[11px] sm:text-[13px] md:text-[14px] text-[#e5e2e1] leading-[1.3] sm:leading-[20px]">
                     {amenity}
                   </span>
                 </div>

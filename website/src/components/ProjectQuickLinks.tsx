@@ -43,12 +43,12 @@ export default function ProjectQuickLinks() {
     >
       <div className="max-w-[1088px] mx-auto">
         <div className="flex flex-col gap-3 sm:gap-4 mb-10 sm:mb-12 md:mb-16">
-          <p className="label-sm">Explore</p>
+          <p className="label-sm">03 — Explore</p>
           <h2 className="heading-section">Discover More</h2>
           <div className="divider-gold" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 md:gap-6">
           {quickLinks.map((link, i) => (
             <motion.div
               key={link.label}
@@ -59,7 +59,7 @@ export default function ProjectQuickLinks() {
             >
               <Link
                 href={link.href}
-                className="group block border border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] p-6 sm:p-7 md:p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] h-full relative overflow-hidden bg-[#1a1a1a]/0 hover:bg-[#1a1a1a]/40"
+                className="group block border border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] p-4 sm:p-7 md:p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] h-full relative overflow-hidden bg-[#1a1a1a]/0 hover:bg-[#1a1a1a]/40"
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -68,16 +68,16 @@ export default function ProjectQuickLinks() {
                   }}
                 />
                 <div className="relative z-10">
-                  <span className="text-[28px] sm:text-[32px] mb-4 sm:mb-5 block" aria-hidden="true">
+                  <span className="text-[24px] sm:text-[32px] mb-3 sm:mb-5 block text-[#f2ca50] group-hover:text-[#ffdf7d] transition-colors" aria-hidden="true">
                     {link.icon}
                   </span>
-                  <h3 className="font-heading text-[18px] sm:text-[20px] text-[#f2ca50] leading-[28px] mb-2 group-hover:text-[#ffdf7d] transition-colors">
+                  <h3 className="font-heading text-[15px] sm:text-[20px] text-[#f2ca50] leading-[22px] sm:leading-[28px] mb-1.5 sm:mb-2 group-hover:text-[#ffdf7d] transition-colors">
                     {link.label}
                   </h3>
-                  <p className="font-body text-[12px] sm:text-[13px] text-[#99907c] leading-[20px] mb-4 sm:mb-6">
+                  <p className="font-body text-[11px] sm:text-[13px] text-[#99907c] leading-[17px] sm:leading-[20px] mb-3 sm:mb-6">
                     {link.description}
                   </p>
-                  <span className="font-body font-bold text-[11px] sm:text-[12px] tracking-[1.2px] uppercase text-[#d0c5af] group-hover:text-[#f2ca50] transition-colors flex items-center gap-2">
+                  <span className="font-body font-bold text-[10px] sm:text-[12px] tracking-[1px] sm:tracking-[1.2px] uppercase text-[#d0c5af] group-hover:text-[#f2ca50] transition-colors flex items-center gap-1.5 sm:gap-2">
                     EXPLORE 
                     <span className="transform group-hover:translate-x-1 transition-transform duration-300">
                       →

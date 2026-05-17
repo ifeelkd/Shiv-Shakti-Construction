@@ -16,12 +16,13 @@ export default function ExecutionProtocol() {
       <div className="max-w-[1088px] mx-auto">
         {/* Section Header */}
         <div className="flex flex-col gap-3 sm:gap-4 mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <p className="label-sm">04 — Process</p>
+          <p className="label-sm">06 — Process</p>
           <h2 className="heading-section">Execution Protocol</h2>
           <div className="divider-gold" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+        {/* Cards — Desktop 4-Col Grid / Mobile 2x2 Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
           {processSteps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -29,24 +30,24 @@ export default function ExecutionProtocol() {
               whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
               viewport={{ once: true, margin: "-60px" }}
-              className="p-6 sm:p-8 flex flex-col gap-4 sm:gap-5 group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(242,202,80,0.15)] border border-transparent hover:border-[#f2ca50]/20"
+              className="p-3.5 xs:p-5 sm:p-8 flex flex-col gap-2 sm:gap-5 group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(242,202,80,0.15)] border border-transparent hover:border-[#f2ca50]/20 relative"
               style={{
                 background:
                   "linear-gradient(to bottom, rgba(25,28,30,0) 0%, rgba(242,202,80,0.1) 100%)",
               }}
             >
               {/* Step Number */}
-              <p className="font-heading font-normal text-[36px] sm:text-[40px] md:text-[48px] text-[#f2ca50]/60 group-hover:text-[#f2ca50] transition-colors duration-500 leading-[1]">
+              <p className="font-heading font-normal text-[24px] xs:text-[32px] sm:text-[40px] lg:text-[48px] text-[#f2ca50]/60 group-hover:text-[#f2ca50] transition-colors duration-500 leading-[1]">
                 {step.number}
               </p>
 
               {/* Step Title */}
-              <h3 className="font-heading font-normal text-[15px] sm:text-[16px] md:text-[18px] tracking-[0.9px] uppercase text-[#f2ca50]/80 group-hover:text-[#f2ca50] transition-colors duration-500 leading-[28px]">
+              <h3 className="font-heading font-normal text-[11px] xs:text-[13px] sm:text-[16px] lg:text-[18px] tracking-[0.9px] uppercase text-[#f2ca50]/80 group-hover:text-[#f2ca50] transition-colors duration-500 leading-snug lg:leading-[28px]">
                 {step.title}
               </h3>
 
               {/* Step Description */}
-              <p className="font-body font-normal text-[13px] md:text-[14px] text-[#d0c5af] group-hover:text-white transition-colors duration-500 leading-[24px] sm:leading-[26px] md:leading-[28px]">
+              <p className="font-body font-normal text-[9px] xs:text-[11px] sm:text-[13px] lg:text-[14px] text-[#d0c5af] group-hover:text-white transition-colors duration-500 leading-[14px] xs:leading-[18px] sm:leading-[24px] lg:leading-[28px]">
                 {step.description}
               </p>
 

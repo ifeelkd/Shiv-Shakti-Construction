@@ -25,7 +25,7 @@ export default function Project3DShowcase() {
     <section
       ref={sectionRef}
       id="showcase"
-      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden"
+      className="relative h-[65vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden"
       style={{ 
         backgroundColor: "#030303",
         backgroundImage: `radial-gradient(circle at 50% 50%, #0a0a0a 0%, #030303 100%)`
@@ -45,7 +45,7 @@ export default function Project3DShowcase() {
         
         {/* DEPTH LAYER 1: BACK TEXT (PARALLAX) */}
         <div 
-          className="absolute inset-0 flex items-center justify-center z-0 transition-transform duration-300 ease-out"
+          className="absolute inset-0 hidden md:flex items-center justify-center z-0 transition-transform duration-300 ease-out"
           style={{ transform: `translate(${mousePos.x * -0.5}px, ${mousePos.y * -0.5}px)` }}
         >
           <motion.h2
@@ -177,7 +177,7 @@ export default function Project3DShowcase() {
 
         {/* DEPTH LAYER 4: HUGE BASE OVERLAY */}
         <div 
-          className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-10"
+          className="absolute inset-0 hidden md:flex items-center justify-center z-20 pointer-events-none opacity-10"
           style={{ transform: `translate(${mousePos.x * 1.5}px, ${mousePos.y * 1.5}px)` }}
         >
           <h2 className="font-heading font-black text-[25vw] leading-none tracking-tighter uppercase text-white/5">

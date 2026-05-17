@@ -31,6 +31,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Shiv Shakti Towers | Shiv Shakti Construction — Premium Living in Bongaigaon",
+  icons: {
+    icon: "/SS Logo.png?v=2",
+    apple: "/SS Logo.png?v=2",
+  },
   description:
     "Discover Shiv Shakti Towers — a masterclass in vertical living by Shiv Shakti Construction. Explore 2BHK, 3BHK, and Penthouse residences in Bongaigaon, Assam.",
   openGraph: {
@@ -65,8 +69,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${notoSerif.variable} ${inter.variable} ${manrope.variable} antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen bg-[#131313] text-[#e5e2e1]">
+      <body className="min-h-screen bg-[#131313] text-[#e5e2e1]" suppressHydrationWarning>
         {/* Skip to main content link for accessibility */}
         <a
           href="#main-content"

@@ -21,7 +21,7 @@ export default function LocationPage() {
       <main id="main-content">
         {/* Location Hero */}
         <section
-          className="relative pt-[120px] sm:pt-[140px] pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-12 lg:px-24"
+          className="relative pt-[90px] md:pt-[140px] pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-12 lg:px-24"
           style={{ backgroundColor: "#0e0e0e" }}
         >
           <div

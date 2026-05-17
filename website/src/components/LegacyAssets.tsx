@@ -40,12 +40,12 @@ export default function LegacyAssets() {
         {/* Section Header with Nav Arrows */}
         <div className="flex items-end justify-between mb-10 sm:mb-12 md:mb-16 lg:mb-20">
           <div className="flex flex-col gap-3 sm:gap-4">
-            <p className="label-sm">03 — Landmarks</p>
+            <p className="label-sm">05 — Legacy Assets</p>
             <h2 className="heading-section">Legacy Assets</h2>
           </div>
 
-          {flatTypes.length > 3 && (
-            <div className="flex items-center gap-3 sm:gap-4">
+          {flatTypes.length > 1 && (
+            <div className="flex lg:hidden items-center gap-3 sm:gap-4">
               <button
                 onClick={() => scrollTo("prev")}
                 disabled={activeIndex === 0}
@@ -93,7 +93,7 @@ export default function LegacyAssets() {
         {/* Cards — Desktop Grid / Mobile Horizontal Scroll */}
         <div
           ref={scrollRef}
-          className="flex lg:grid lg:grid-cols-3 gap-6 lg:gap-8 overflow-x-auto lg:overflow-visible scroll-snap-x pb-4 lg:pb-0 -mx-4 px-4 sm:-mx-0 sm:px-0"
+          className="flex lg:grid lg:grid-cols-3 gap-6 lg:gap-8 overflow-x-auto overflow-y-hidden lg:overflow-visible scroll-snap-x pb-4 lg:pb-0"
         >
           {flatTypes.map((flat, index) => {
             const detailHref =
@@ -150,7 +150,7 @@ export default function LegacyAssets() {
         </div>
 
         {/* Mobile scroll indicator dots */}
-        {flatTypes.length > 3 && (
+        {flatTypes.length > 1 && (
           <div className="flex lg:hidden justify-center gap-2 mt-4">
             {flatTypes.map((flat, idx) => (
               <span
