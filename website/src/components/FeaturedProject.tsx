@@ -74,10 +74,24 @@ export default function FeaturedProject() {
             className="col-span-12 md:col-span-5 lg:pl-12 flex flex-col gap-1.5 xs:gap-2.5 sm:gap-4 mt-8 md:mt-0"
           >
             <p className="font-body font-normal text-[9px] xs:text-[10px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#d0c5af] leading-[13px] xs:leading-[15px] sm:leading-[24px] md:leading-[26px] pt-1 sm:pt-4 max-w-[420px]">
-              A masterclass in vertical living. Designed with a skeletal frame of
-              reinforced titanium-infused concrete, the Towers redefine the skyline
-              of Bongaigaon.
+              A premier commercial and residential landmark redefining the skyline of North Bongaigaon with superior engineering and modern design.
             </p>
+
+            {/* Key Points */}
+            <div className="flex flex-col gap-2 pt-2">
+              <div className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f2ca50]" />
+                <span className="font-heading font-bold text-[12px] xs:text-[13px] sm:text-[15px] text-[#ffdf7d]">
+                  G+6 Floor
+                </span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#f2ca50]" />
+                <span className="font-heading font-bold text-[12px] xs:text-[13px] sm:text-[15px] text-[#ffdf7d]">
+                  2028 Arrival
+                </span>
+              </div>
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-col gap-2 xs:gap-3 sm:gap-6 pt-2 xs:pt-4 sm:pt-8">

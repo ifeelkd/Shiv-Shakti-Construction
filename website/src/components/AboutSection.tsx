@@ -74,7 +74,7 @@ export default function AboutSection() {
             >
               <div className="flex items-center gap-4">
                 <a
-                  href="https://www.instagram.com/shiv_shakti_marbles_/"
+                  href="https://www.instagram.com/shiv.shakti.constructions/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 border border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] px-5 py-3 transition-colors duration-300 group"
@@ -167,7 +167,7 @@ export default function AboutSection() {
           >
             <div className="flex items-center gap-4">
               <a
-                href="https://www.instagram.com/shiv_shakti_marbles_/"
+                href="https://www.instagram.com/shiv.shakti.constructions/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 border border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] px-5 py-3 transition-colors duration-300 group"

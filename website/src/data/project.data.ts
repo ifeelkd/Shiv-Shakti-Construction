@@ -14,9 +14,10 @@ export interface Testimonial {
 }
 
 export const projectSpecs: ProjectSpec[] = [
-  { label: "FLOORS", value: "30" },
-  { label: "COMPLETION", value: "2026" },
-  { label: "LOCATION", value: "BONGAIGAON" },
+  { label: "LOCATION", value: "North Bongaigaon" },
+  { label: "COMMERCIAL", value: "G+2 Floor" },
+  { label: "RESIDENTIAL", value: "3+6 Floor" },
+  { label: "COMPLETION", value: "2028" },
 ];
 
 export const partners: Partner[] = [
@@ -34,12 +35,12 @@ export const testimonial: Testimonial = {
 };
 
 export const heroStats = [
-  { value: "BORN IN MARBLE", label: "FOUNDATION OF QUALITY" },
-  { value: "500+ FAMILIES", label: "OUR GREATEST LEGACY" },
+  { value: "BUILT ON TRUST", label: "The Foundation of Every Project" },
+  { value: "ENGINEERED FOR EXCELLENCE", label: "Quality in Every Detail" },
 ];
 
 export const contactInfo = {
   email: "info@shivshakti.com",
   address: "Chapaguri, Bongaigaon, Assam",
-  phone: "+91 98765 43210",
+  phone: "+91 96786 34115",
 };

@@ -75,9 +75,7 @@ export default function HeroSection() {
             {...anim({ y: 20 }, 0.6)}
             className="font-body font-light text-[13px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#d0c5af] leading-[22px] sm:leading-[26px] md:leading-[28px] max-w-[576px] mb-6 sm:mb-8 md:mb-12"
           >
-            Crafting the skyline with mathematical precision and editorial
-            elegance. Shiv Shakti is the silent force behind the city&apos;s most
-            ambitious monoliths.
+            Creating iconic spaces that combine timeless architecture, superior craftsmanship, and modern living.
           </motion.p>
 
           {/* CTA */}
@@ -102,11 +100,11 @@ export default function HeroSection() {
           {/* Mobile/Tablet Stats */}
           <motion.div
             {...anim({ y: 20 }, 1.0)}
-            className="flex md:hidden flex-row justify-between items-center gap-4 w-full mt-10 pt-6 border-t border-[#d4af37]/20"
+            className="flex md:hidden flex-col sm:flex-row justify-between items-start gap-4 w-full mt-10 pt-6 border-t border-[#d4af37]/20"
           >
             {heroStats.map((stat) => (
               <div key={stat.label} className="flex-1 text-left">
-                <p className="font-heading font-bold text-[20px] sm:text-[24px] text-[#d4af37] leading-[1.1]">
+                <p className="font-heading font-bold text-[15px] sm:text-[18px] text-[#d4af37] leading-[1.2]">
                   {stat.value}
                 </p>
                 <p className="font-body font-normal text-[8px] sm:text-[9px] tracking-[0.8px] uppercase text-[#d0c5af] leading-[12px] mt-1">
@@ -121,14 +119,14 @@ export default function HeroSection() {
       {/* Stats - Bottom Right (Desktop Only) */}
       <motion.div
         {...anim({ x: 20 }, 1.0)}
-        className="hidden md:flex absolute bottom-8 sm:bottom-12 right-4 sm:right-6 md:right-12 flex flex-col items-end gap-3 sm:gap-4 z-10"
+        className="hidden md:flex absolute bottom-8 sm:bottom-12 right-4 sm:right-6 md:right-12 flex flex-col items-end gap-3 sm:gap-4 z-10 max-w-[340px]"
       >
         {heroStats.map((stat) => (
           <div key={stat.label} className="text-right">
-            <p className="font-heading font-bold text-[24px] sm:text-[28px] md:text-[36px] text-[#d4af37] leading-[1.1]">
+            <p className="font-heading font-bold text-[18px] sm:text-[22px] md:text-[24px] lg:text-[28px] text-[#d4af37] leading-[1.2]">
               {stat.value}
             </p>
-            <p className="font-body font-normal text-[9px] sm:text-[10px] tracking-[1px] uppercase text-[#d0c5af] leading-[15px]">
+            <p className="font-body font-normal text-[9px] sm:text-[10px] tracking-[1px] uppercase text-[#d0c5af] leading-[15px] mt-1">
               {stat.label}
             </p>
           </div>

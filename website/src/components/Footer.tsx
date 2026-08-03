@@ -68,10 +68,10 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-1.5 sm:gap-3">
               <a
-                href="tel:+919876543210"
+                href="tel:+919678634115"
                 className="font-body text-[12px] sm:text-[13px] text-[#99907c] hover:text-[#d4af37] transition-colors"
               >
-                +91 98765 43210
+                +91 96786 34115
               </a>
               <a
                 href="mailto:info@shivshakti.com"
@@ -92,7 +92,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-row flex-wrap gap-2.5 sm:flex-col sm:gap-4">
               <a
-                href="https://www.instagram.com/shiv_shakti_marbles_/"
+                href="https://www.instagram.com/shiv.shakti.constructions/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] px-3 py-2 sm:px-5 sm:py-2.5 transition-all duration-500 group w-fit"
@@ -122,7 +122,7 @@ export default function Footer() {
                 </span>
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hello%2C%20I%27m%20interested%20in%20Shiv%20Shakti%20Towers"
+                href="https://wa.me/919678634115?text=Hello%2C%20I%27m%20interested%20in%20Shiv%20Shakti%20Towers"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] px-3 py-2 sm:px-5 sm:py-2.5 transition-all duration-500 group w-fit"

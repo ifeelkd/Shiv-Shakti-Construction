@@ -194,7 +194,7 @@ export default function Project3DShowcase() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            <p className="font-heading text-[56px] font-black text-white/80 leading-none">30</p>
+            <p className="font-heading text-[56px] font-black text-white/80 leading-none">G+6</p>
             <p className="font-body text-[10px] tracking-[4px] text-[#d4af37] uppercase">Floors</p>
           </motion.div>
 
@@ -205,7 +205,7 @@ export default function Project3DShowcase() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 1.4 }}
           >
-            <p className="font-heading text-[56px] font-black text-white/80 leading-none">2026</p>
+            <p className="font-heading text-[56px] font-black text-white/80 leading-none">2028</p>
             <p className="font-body text-[10px] tracking-[4px] text-[#d4af37] uppercase">Arrival</p>
           </motion.div>
         </div>
@@ -213,11 +213,11 @@ export default function Project3DShowcase() {
         {/* Mobile Info (Simple Fallback) */}
         <div className="absolute bottom-12 w-full px-6 flex justify-between lg:hidden z-40">
            <div className="text-center">
-             <p className="font-heading font-black text-[32px] text-white">30</p>
+             <p className="font-heading font-black text-[32px] text-white">G+6</p>
              <p className="font-body text-[8px] tracking-[2px] text-[#d4af37]">FLOORS</p>
            </div>
            <div className="text-center">
-             <p className="font-heading font-black text-[32px] text-white">2026</p>
+             <p className="font-heading font-black text-[32px] text-white">2028</p>
              <p className="font-body text-[8px] tracking-[2px] text-[#d4af37]">ARRIVAL</p>
            </div>
         </div>
