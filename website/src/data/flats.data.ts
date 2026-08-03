@@ -73,7 +73,7 @@ export const flatTypes: FlatType[] = [
       "Lift Access",
     ],
     ctaLabel: "ENQUIRE ABOUT 3BHK",
-    map2d: ["/images/maps/2d_map_page_1.jpg", "/images/maps/2d_map_page_2.jpg"],
+    map2d: ["/images/maps/master_2d_floor_plan.jpg"],
     variants: [
       {
         name: "Flat A",
@@ -186,7 +186,7 @@ export const flatTypes: FlatType[] = [
       "Lift Access",
     ],
     ctaLabel: "ENQUIRE ABOUT 2BHK",
-    map2d: ["/images/maps/2d_map_page_1.jpg", "/images/maps/2d_map_page_2.jpg"],
+    map2d: ["/images/maps/master_2d_floor_plan.jpg"],
     variants: [
       {
         name: "Flat B",
