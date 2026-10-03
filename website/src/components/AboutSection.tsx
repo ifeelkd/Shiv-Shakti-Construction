@@ -108,11 +108,11 @@ export default function AboutSection() {
               {...anim({ x: 30 }, 0.2)}
               className="w-full"
             >
-              <div className="grid grid-cols-2 gap-4 sm:gap-5">
+              <div className="grid grid-cols-2 gap-3 sm:gap-5">
                 {milestones.map((stat, i) => (
                   <div
                     key={stat.label}
-                    className="border border-[rgba(77,70,53,0.3)] p-6 sm:p-8 text-center transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] hover:border-[#d4af37]/40"
+                    className="border border-[rgba(77,70,53,0.3)] p-4 sm:p-6 md:p-8 text-center transition-all duration-500 group hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] hover:border-[#d4af37]/40"
                     style={{
                       background:
                         i === 0
@@ -120,10 +120,10 @@ export default function AboutSection() {
                           : "transparent",
                     }}
                   >
-                    <p className="font-heading font-bold text-[32px] sm:text-[40px] md:text-[48px] text-[#d4af37]/80 group-hover:text-[#d4af37] transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] mb-2">
+                    <p className="font-heading font-bold text-[26px] xs:text-[30px] sm:text-[40px] md:text-[48px] text-[#d4af37]/80 group-hover:text-[#d4af37] transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] mb-1 sm:mb-2">
                       {stat.value}
                     </p>
-                    <p className="font-body text-[10px] sm:text-[11px] tracking-[1px] uppercase text-[#99907c] group-hover:text-[#d0c5af] transition-colors duration-500">
+                    <p className="font-body text-[9px] xs:text-[10px] sm:text-[11px] tracking-[0.8px] sm:tracking-[1px] uppercase text-[#99907c] group-hover:text-[#d0c5af] transition-colors duration-500">
                       {stat.label}
                     </p>
                   </div>

@@ -42,7 +42,7 @@ export const flatTypes: FlatType[] = [
     slug: "3bhk",
     title: "3 BHK",
     subtitle: "Premium Residential",
-    image: "/images/card-3bhk.png",
+    image: "/images/interior-3bhk.jpg",
     configuration: "3 Bed · 3 Bath · 3 Balcony",
     area: "1,475 – 1,999 sq.ft.",
     specifications: [
@@ -166,7 +166,7 @@ export const flatTypes: FlatType[] = [
     slug: "2bhk",
     title: "2 BHK",
     subtitle: "Smart Residential",
-    image: "/images/card-2bhk.png",
+    image: "/images/interior-2bhk.jpg",
     configuration: "2 Bed · 2 Bath · 2 Balcony",
     area: "1,258 – 1,592 sq.ft.",
     specifications: [
@@ -286,3 +286,16 @@ export const flatTypes: FlatType[] = [
     constructionSpecs: [],
   },
 ];
+
+export function getFlatBySlug(slug: string): FlatType | undefined {
+  return flatTypes.find((f) => f.slug === slug);
+}
+
+export function getResidentialFlats(): FlatType[] {
+  return flatTypes.filter((f) => f.slug !== "penthouse");
+}
+
+export function getAllFlatSlugs(): string[] {
+  return flatTypes.map((f) => f.slug);
+}
+

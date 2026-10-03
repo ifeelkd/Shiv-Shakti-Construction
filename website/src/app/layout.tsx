@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Serif, Inter, Manrope } from "next/font/google";
 import "./globals.css";
+import StickyMobileBar from "@/components/StickyMobileBar";
 
 const notoSerif = Noto_Serif({
   variable: "--font-noto-serif",
@@ -30,6 +31,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://shivshakticonstruction.com"),
   title: "Shiv Shakti Towers | Shiv Shakti Construction — Premium Living in Bongaigaon",
   icons: {
     icon: "/SS Logo.png?v=2",
@@ -80,6 +82,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <StickyMobileBar />
       </body>
     </html>
   );

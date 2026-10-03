@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { nearbyPlaces, placeCategories, type NearbyPlace } from "@/data/nearby-places.data";
 
@@ -43,11 +44,11 @@ export default function NearbyPlaces() {
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10 md:mb-12">
+        {/* Category Filter — Horizontal Touch Carousel on Mobile */}
+        <div className="flex overflow-x-auto hide-scrollbar gap-2 sm:gap-3 mb-6 sm:mb-10 md:mb-12 pb-2 sm:pb-0 snap-x">
           <button
             onClick={() => setActiveCategory("all")}
-            className={`px-3 sm:px-4 py-2 text-[11px] sm:text-[12px] tracking-[1px] uppercase font-body font-bold transition-all duration-300 border flex items-center gap-2 ${
+            className={`px-3.5 sm:px-4 py-2 text-[11px] sm:text-[12px] tracking-[1px] uppercase font-body font-bold transition-all duration-300 border flex items-center gap-2 flex-shrink-0 snap-start min-h-[40px] ${
               activeCategory === "all"
                 ? "bg-[#d4af37] text-[#3c2f00] border-[#d4af37]"
                 : "bg-transparent text-[#d0c5af] border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] hover:text-[#f2ca50]"
@@ -59,7 +60,7 @@ export default function NearbyPlaces() {
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`px-3 sm:px-4 py-2 text-[11px] sm:text-[12px] tracking-[1px] uppercase font-body font-bold transition-all duration-300 border flex items-center gap-2 ${
+              className={`px-3.5 sm:px-4 py-2 text-[11px] sm:text-[12px] tracking-[1px] uppercase font-body font-bold transition-all duration-300 border flex items-center gap-2 flex-shrink-0 snap-start min-h-[40px] ${
                 activeCategory === cat.key
                   ? "bg-[#d4af37] text-[#3c2f00] border-[#d4af37]"
                   : "bg-transparent text-[#d0c5af] border-[rgba(77,70,53,0.3)] hover:border-[#d4af37] hover:text-[#f2ca50]"
@@ -109,6 +110,15 @@ export default function NearbyPlaces() {
             No places in this category yet.
           </p>
         )}
+
+        <div className="mt-10 sm:mt-12 text-center">
+          <Link
+            href="/location"
+            className="inline-flex items-center gap-2 border border-[#d4af37] bg-[#141414] hover:bg-[#d4af37] text-[#f2ca50] hover:text-[#1c1400] font-body font-bold text-[12px] sm:text-[13px] tracking-[1.4px] px-8 py-3.5 transition-all uppercase leading-none"
+          >
+            VIEW FULL LOCATION DETAILS &amp; MAP →
+          </Link>
+        </div>
       </div>
     </section>
   );

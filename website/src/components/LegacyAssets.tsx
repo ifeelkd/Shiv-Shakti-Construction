@@ -93,13 +93,13 @@ export default function LegacyAssets() {
         {/* Cards — Desktop Grid / Mobile Horizontal Scroll */}
         <div
           ref={scrollRef}
-          className="flex lg:grid lg:grid-cols-3 gap-6 lg:gap-8 overflow-x-auto overflow-y-hidden lg:overflow-visible scroll-snap-x pb-4 lg:pb-0"
+          className="flex lg:grid lg:grid-cols-3 gap-6 lg:gap-8 overflow-x-auto overflow-y-hidden lg:overflow-visible scroll-snap-x pb-4 lg:pb-0 hide-scrollbar"
         >
           {flatTypes.map((flat, index) => {
             const detailHref =
               flat.slug === "penthouse"
                 ? "/contact"
-                : `/flats/${flat.slug}`;
+                : `/project/${flat.slug}`;
 
             return (
               <motion.article
@@ -110,7 +110,7 @@ export default function LegacyAssets() {
                 }
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="bg-[#f2ca50] overflow-hidden group flex-shrink-0 w-[80vw] sm:w-[70vw] lg:w-auto snap-start transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]"
+                className="bg-[#f2ca50] overflow-hidden group flex-shrink-0 w-[85vw] sm:w-[70vw] lg:w-auto snap-start transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]"
               >
                 <Link href={detailHref} className="block">
                   {/* Card Image */}

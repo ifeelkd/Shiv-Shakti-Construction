@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { heroStats } from "@/data/project.data";
 
@@ -18,7 +19,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative h-[65vh] md:min-h-[calc(100svh-124px)] mt-[67px] md:mt-[124px] flex items-center overflow-hidden"
+      className="relative min-h-[calc(100svh-67px)] md:min-h-[calc(100svh-124px)] mt-[67px] md:mt-[124px] flex items-center overflow-hidden"
       style={{ backgroundColor: "#131313" }}
       aria-label="Hero — Shiv Shakti Construction"
     >
@@ -83,8 +84,8 @@ export default function HeroSection() {
             {...anim({ y: 20 }, 0.8)}
             className="flex items-center gap-0"
           >
-            <a
-              href="#real-estate"
+            <Link
+              href="/project"
               className="group bg-[#d4af37] hover:bg-[#f2ca50] active:bg-[#e6be3f] transition-colors duration-300 px-5 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center gap-3"
             >
               <span className="font-body font-bold text-[11px] sm:text-[12px] md:text-[14px] tracking-[1.4px] text-[#3c2f00] text-center whitespace-nowrap">
@@ -93,7 +94,7 @@ export default function HeroSection() {
               <span className="text-[#3c2f00] transform group-hover:translate-x-1 transition-transform duration-300">
                 →
               </span>
-            </a>
+            </Link>
             <div className="ml-8 w-[128px] h-[0.5px] bg-[#d4af37] hidden md:block" />
           </motion.div>
 

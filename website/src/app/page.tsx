@@ -5,8 +5,8 @@ import ServicesGrid from "@/components/ServicesGrid";
 import FeaturedProject from "@/components/FeaturedProject";
 import ProjectQuickLinks from "@/components/ProjectQuickLinks";
 import NearbyPlaces from "@/components/NearbyPlaces";
-import LegacyAssets from "@/components/LegacyAssets";
-import ExecutionProtocol from "@/components/ExecutionProtocol";
+import AmenitiesSection from "@/components/AmenitiesSection";
+// import ExecutionProtocol from "@/components/ExecutionProtocol"; // Process section temporarily hidden per client request
 import PartnersTestimonials from "@/components/PartnersTestimonials";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -23,8 +23,8 @@ export default function Home() {
         <FeaturedProject />
         <ProjectQuickLinks />
         <NearbyPlaces />
-        <LegacyAssets />
-        <ExecutionProtocol />
+        <AmenitiesSection />
+        {/* Process section hidden for now: <ExecutionProtocol /> */}
         <PartnersTestimonials />
         <AboutSection />
         <ContactSection />

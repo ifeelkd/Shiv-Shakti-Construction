@@ -9,13 +9,13 @@ const quickLinks = [
   {
     label: "2BHK Flats",
     description: "Smart living starting at 1,150 sq.ft.",
-    href: "/flats/2bhk",
+    href: "/project/2bhk",
     icon: <HomeIcon size={32} />,
   },
   {
     label: "3BHK Flats",
     description: "Premium units with 1,650 sq.ft. of space.",
-    href: "/flats/3bhk",
+    href: "/project/3bhk",
     icon: <TowerIcon size={32} />,
   },
   {

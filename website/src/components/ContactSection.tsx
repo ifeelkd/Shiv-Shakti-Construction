@@ -90,19 +90,19 @@ export default function ContactSection({ isPage = false }: ContactSectionProps) 
             Submit your project brief for a technical feasibility study. Our senior engineers respond within 48 business hours.
           </p>
           
-          {/* Quick Info Grid: 2-Col Dashboard on Mobile, List on Desktop */}
-          <div className="grid grid-cols-2 lg:grid-cols-1 gap-6 pt-6 border-t border-[rgba(212,175,55,0.15)] lg:border-t-0">
+          {/* Quick Info Grid: 1-Col Dashboard on Mobile, List on Desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5 pt-6 border-t border-[rgba(212,175,55,0.15)] lg:border-t-0 text-center lg:text-left">
             <div>
-              <p className="font-body text-[10px] sm:text-[11px] tracking-[1.2px] uppercase text-[#f2ca50] leading-[16px] mb-1">Phone</p>
-              <a href={`tel:${contactInfo.phone}`} className="font-body text-[13px] sm:text-[16px] text-[#e5e2e1] leading-[20px] hover:text-[#f2ca50] transition-colors break-all font-semibold">{contactInfo.phone}</a>
+              <p className="font-body text-[11px] tracking-[1.2px] uppercase text-[#f2ca50] leading-[16px] mb-1">Phone</p>
+              <a href={`tel:${contactInfo.phone}`} className="font-body text-[14px] sm:text-[16px] text-[#e5e2e1] leading-[20px] hover:text-[#f2ca50] transition-colors break-all font-semibold">{contactInfo.phone}</a>
             </div>
             <div>
-              <p className="font-body text-[10px] sm:text-[11px] tracking-[1.2px] uppercase text-[#f2ca50] leading-[16px] mb-1">Inquiries</p>
-              <a href={`mailto:${contactInfo.email}`} className="font-body text-[13px] sm:text-[16px] text-[#e5e2e1] leading-[20px] hover:text-[#f2ca50] transition-colors break-all font-semibold">{contactInfo.email}</a>
+              <p className="font-body text-[11px] tracking-[1.2px] uppercase text-[#f2ca50] leading-[16px] mb-1">Inquiries</p>
+              <a href={`mailto:${contactInfo.email}`} className="font-body text-[14px] sm:text-[16px] text-[#e5e2e1] leading-[20px] hover:text-[#f2ca50] transition-colors break-all font-semibold">{contactInfo.email}</a>
             </div>
-            <div className="col-span-2 lg:col-span-1">
-              <p className="font-body text-[10px] sm:text-[11px] tracking-[1.2px] uppercase text-[#f2ca50] leading-[16px] mb-1">Headquarters</p>
-              <p className="font-body text-[13px] sm:text-[16px] text-[#e5e2e1] leading-[20px] font-semibold">{contactInfo.address}</p>
+            <div className="sm:col-span-2 lg:col-span-1">
+              <p className="font-body text-[11px] tracking-[1.2px] uppercase text-[#f2ca50] leading-[16px] mb-1">Headquarters</p>
+              <p className="font-body text-[14px] sm:text-[16px] text-[#e5e2e1] leading-[20px] font-semibold">{contactInfo.address}</p>
             </div>
           </div>
         </motion.div>

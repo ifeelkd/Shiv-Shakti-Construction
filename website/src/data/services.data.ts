@@ -9,26 +9,26 @@ export interface ServiceItem {
 export const services: ServiceItem[] = [
   {
     icon: "/images/icon-structural.svg",
-    title: "Structural Engineering",
+    title: "Quality Construction & Engineering",
     description:
-      "Deep-foundation logistics and high-tensile steel integration for seismic-ready commercial monoliths.",
-    cta: "CORE SPECS",
-    href: "/#process",
+      "Earthquake-resistant RCC design, deep foundations, and certified high-grade steel for rock-solid safety and longevity.",
+    cta: "OUR QUALITY",
+    href: "/project",
   },
   {
     icon: "/images/icon-material.svg",
-    title: "Material Procurement",
+    title: "Premium Materials & Finishes",
     description:
-      "Exclusive sourcing of Grade-A Italian marble, structural glass, and sustainable carbon-neutral concrete.",
-    cta: "LOGISTICS",
-    href: "/#about",
+      "Handpicked vitrified tiles, branded electrical and sanitary fittings, premium fixtures, and top-grade paints for a luxurious feel.",
+    cta: "SPECIFICATIONS",
+    href: "/project",
   },
   {
     icon: "/images/icon-urban.svg",
-    title: "Urban Development",
+    title: "Real Estate Development",
     description:
-      "Comprehensive site master-planning and navigational design for high-density residential complexes.",
-    cta: "PORTFOLIO",
-    href: "/#landmarks",
+      "Thoughtfully planned residential and commercial spaces in prime North Bongaigaon with modern amenities and clear title deeds.",
+    cta: "EXPLORE PROJECT",
+    href: "/project",
   },
 ];

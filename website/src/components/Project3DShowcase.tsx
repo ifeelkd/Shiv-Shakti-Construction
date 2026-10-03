@@ -25,7 +25,7 @@ export default function Project3DShowcase() {
     <section
       ref={sectionRef}
       id="showcase"
-      className="relative h-[65vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[580px] sm:min-h-[640px] md:min-h-[100vh] py-12 md:py-0 flex items-center justify-center overflow-hidden"
       style={{ 
         backgroundColor: "#030303",
         backgroundImage: `radial-gradient(circle at 50% 50%, #0a0a0a 0%, #030303 100%)`
@@ -72,7 +72,7 @@ export default function Project3DShowcase() {
             style={{ perspective: "2500px" }}
           >
             <div
-              className="relative w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]"
+              className="relative w-[150px] sm:w-[220px] md:w-[280px] lg:w-[320px] h-[340px] sm:h-[500px] md:h-[600px] lg:h-[700px]"
               style={{
                 transformStyle: "preserve-3d",
                 animation: prefersReduced ? "none" : "towerBreathe 15s ease-in-out infinite",
@@ -159,7 +159,7 @@ export default function Project3DShowcase() {
             transition={{ duration: 1.2, delay: 0.7 }}
             className="pointer-events-auto"
           >
-            <Link href="/#real-estate" className="group block cursor-pointer">
+            <Link href="/project" className="group block cursor-pointer">
               <h2
                 className="font-heading font-black text-[6vw] sm:text-[5vw] leading-none tracking-tight uppercase text-center transition-all duration-500 group-hover:drop-shadow-[0_0_30px_rgba(242,202,80,0.5)]"
                 style={{ 
@@ -206,7 +206,7 @@ export default function Project3DShowcase() {
             transition={{ delay: 1.4 }}
           >
             <p className="font-heading text-[56px] font-black text-white/80 leading-none">2028</p>
-            <p className="font-body text-[10px] tracking-[4px] text-[#d4af37] uppercase">Arrival</p>
+            <p className="font-body text-[10px] tracking-[4px] text-[#d4af37] uppercase">Completion</p>
           </motion.div>
         </div>
 
@@ -218,7 +218,7 @@ export default function Project3DShowcase() {
            </div>
            <div className="text-center">
              <p className="font-heading font-black text-[32px] text-white">2028</p>
-             <p className="font-body text-[8px] tracking-[2px] text-[#d4af37]">ARRIVAL</p>
+             <p className="font-body text-[8px] tracking-[2px] text-[#d4af37]">COMPLETION</p>
            </div>
         </div>
       </div>
